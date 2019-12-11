@@ -2,24 +2,11 @@ import React, {useEffect, useState} from 'react';
 import './App.scss';
 
 
-const testList = [
-    {name:'test', url: 'dsgdfg'},
-    {name:'test2', url: 'fdbb'},
-];
-
-const testArticles = [
-    {name: 'article1', ulr: 'google.com'},
-    {name: 'article2', ulr: 'google.com'},
-    {name: 'article3', ulr: 'google.com'},
-    {name: 'article4', ulr: 'google.com'},
-    {name: 'article5', ulr: 'google.com'},
-];
-
 const ITEMS_PER_PAGE = 5;
 
 function App() {
     const [channels, setChannels] = useState([]);
-    const [selectedChanel, setSelectedChanel] = useState(testList[0]);
+    const [selectedChanel, setSelectedChanel] = useState({});
     const [currentPage, setCurrentPage] = useState(0);
     const [articles, setArticles] = useState(null);
     const [showCreatePopup, setShowCreatePopup] = useState(false);
